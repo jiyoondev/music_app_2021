@@ -1,7 +1,18 @@
+import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Navigation from "./components/Navigation";
+import './App.css';
+
 
 function App() {
-  return (
-<div>Hello</div>
+  return (   
+    <HashRouter>
+      <Navigation />
+      <Route exact Path="/" component={Home} />
+      <Route Path="/About" component={About} />
+    </HashRouter>
   );
 }
 
